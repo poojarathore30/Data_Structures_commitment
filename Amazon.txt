@@ -1,0 +1,56 @@
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+  signed long long num1=0,num2=0;
+        deque<int> d1,d2;
+        ListNode *ptr1=l1;
+        while(ptr1!=nullptr){
+           d1.push_front(ptr1->val);
+            ptr1=ptr1->next;
+        }
+        
+        ListNode *ptr2=l2;
+        while(ptr2!=nullptr){
+           d2.push_front(ptr2->val);
+            ptr2=ptr2->next;
+        }
+        for (auto it=d1.begin();it<d1.end();it++){
+            num1=num1*10+*it;
+        }
+        for (auto it=d2.begin();it<d2.end();it++){
+            num2=num2*10+*it;
+        }
+        ListNode *temp;
+        ListNode *head=nullptr;
+        signed long long  num3=num1+num2;
+        if(num3==0)
+        {
+            ListNode *new_node=new ListNode();
+            new_node->val=0;
+            new_node->next=nullptr;
+            head=new_node;
+        }
+        else{
+        while(num3!=0){
+            int r=num3%10;
+            ListNode *new_node=new ListNode();
+            new_node->val=r;
+            new_node->next=nullptr;
+            if(head==nullptr){
+                head=new_node;
+            }
+            else{                
+            temp=head;
+                while(temp->next!=nullptr){
+                    temp=temp->next;
+                  
+                }
+             
+              temp->next=new_node;
+            }
+            num3=num3/10;
+        }
+        }
+        return head;
+    }
+};
