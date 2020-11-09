@@ -1,5 +1,7 @@
 //Problem Statement : Replace no more than ‘k’ letters with any letter, find the length of the longest substring having the same letters after replacement.
 //Sliding window concept : Shrinking window size and updating max as the no of diff characters exceed K
+// space complexity : O(26)=O(1)
+// Time complexity : O(N) ,n=length of string
 
 int LOngestLength(string str,int k)
 {
