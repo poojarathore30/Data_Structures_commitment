@@ -1,4 +1,4 @@
-// Problem Statement # Array contains 0s and 1s, if you are allowed to replace no more than ‘k’ 0s with 1s, find the length of the longest contiguous subarray having all 1s.
+// Problem Statement # Array contains 0s and 1s,Replace no more than ‘k’ 0s with 1s, find the length of the longest contiguous subarray having all 1s.
 // Time complexity : O(n)
 // Space complexity : O(1)
 // solution : sliding window concept
