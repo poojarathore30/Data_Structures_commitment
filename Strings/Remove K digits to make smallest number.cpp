@@ -1,3 +1,4 @@
+// Asked in " Adobe "
 // num represented as a string, remove k digits from the number so that the new number is the smallest possible.
 // Input: num = "1432219", k = 3
 // Output: "1219"
