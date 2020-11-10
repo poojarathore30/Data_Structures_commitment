@@ -6,28 +6,27 @@
 
 string removeKdigits(string num, int k) {
  stack<char,int> s;
- for(auto i:nums)
- {
+ 
+ //inserting the samlllest possible number
+ for(auto i:nums) {
  while(s.empty() && k>0 && s.top()>i) 
- {
- s.pop();
- k--;
- }
+ { s.pop(); k--; }
  s.push(c);
  }
+ 
+ // removing ele if not fully
  while(k>0)
- {
- s.pop();
- k--;
- }
+ { s.pop();  k--; }
+ 
+ // fetching the obtained number
  string str="";
  while(!s.empty())
- {
-str=s.top()+str;
-s.pop();
- }
+ { str=s.top()+str; s.pop(); }
+ 
+ //removing leading zeros
 int start=0;
 while(str[start]=='0') start++;
+ 
 string res=str.substr(start,str.length());
  return res;
  }
